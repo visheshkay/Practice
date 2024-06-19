@@ -25,7 +25,7 @@ sellerApp.use((req, res, next) => {
 // Signup
 sellerApp.post('/sellers', expressAsyncHandler(async (req, res) => {
     const newseller = req.body;
-    console.log(newseller);
+    // console.log(newseller);
 
     const dbseller = await sellerscollection.findOne({ username: newseller.username });
 
@@ -52,7 +52,7 @@ sellerApp.post('/login', expressAsyncHandler(async (req, res) => {
             res.send({ message: "Invalid password" });
         } else {
             const signedToken = jwt.sign({ username: dbseller.username }, process.env.SECRET_KEY, { expiresIn: '1d' });
-            res.send({ message: "Login success", token: signedToken, user: dbseller });
+            res.send({ message: "login success", token: signedToken, user: dbseller });
         }
     }
 }));

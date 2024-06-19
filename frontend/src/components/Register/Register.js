@@ -3,12 +3,13 @@ import './Register.css'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
-// import axios from 'axios'
+import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 function Register() {
+    let navigate = useNavigate();
     let {register,handleSubmit,formState:{errors}}=useForm();
     let [err,setErr] = useState("")
     const [showPassword, setShowPassword] = useState(false);
@@ -17,6 +18,19 @@ function Register() {
     };
     async function registerUser(user){
         console.log(user)
+        let res;
+        if(user.userType=='seller'){
+            res = await axios.post('http://localhost:4000/seller-api/sellers',user)
+        }
+        else{
+            res = await axios.post('http://localhost:4000/buyer-api/buyers',user)
+        }
+        if(res.data.message==='Seller created' || res.data.message==='Buyer created'){
+            navigate('/login')
+        }
+        else{
+            setErr(res.data.message)
+        }
         
     }
     return (

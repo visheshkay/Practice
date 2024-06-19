@@ -24,10 +24,10 @@ require('dotenv').config()
         buyerscollection=req.app.get('buyerscollection')
         
         const newbuyer=req.body;
-        console.log(newbuyer)
+      //   console.log(newbuyer)
         
         const dbbuyer=await buyerscollection.findOne({username:newbuyer.username})
-        console.log(dbbuyer)
+      //   console.log(dbbuyer)
         if(dbbuyer!= null){
             res.send({message:"Buyer existed"})
         }else{
@@ -49,7 +49,7 @@ require('dotenv').config()
    
         const buyerCred=req.body;
         
-        const dbbuyer= await sellerscollection.findOne({username:buyerCred.username})
+        const dbbuyer= await buyerscollection.findOne({username:buyerCred.username})
         if(dbbuyer===null){
             res.send({message:"Invalid username"})
         }else{

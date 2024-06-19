@@ -6,16 +6,39 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useDispatch, useSelector } from "react-redux";
+import {buyerSellerLoginThunk} from '../../redux/slice/buyerSellerslice';
+
+
+
 
 function Login() {
     let { register, handleSubmit, formState: { errors } } = useForm()
+    let { loginUserStatus, currentUser, errorOccurred, errMsg } = useSelector(state => state.buyerSellerLoginReducer);
+    let navigate=useNavigate()
     const [showPassword, setShowPassword] = useState(false);
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
-    const login = ()=>{
+
+    let dispatch=useDispatch();
+    const login = (userCred)=>{
+        console.log(userCred)
+        dispatch(buyerSellerLoginThunk(userCred))
 
     }
+
+    useEffect(() => {
+        if (loginUserStatus === true) {
+            console.log('login success')
+          if (currentUser.userType === 'buyer') {
+            navigate('/buyerprofile');
+          } else {
+            navigate('/sellerprofile');
+          }
+        }
+      }, [loginUserStatus, navigate, currentUser]);
+    
     return (
         <div className="signinmain mx-auto">
             <img src="https://media.licdn.com/dms/image/C510BAQH7cLWQv17law/company-logo_200_200/0/1630605479999?e=2147483647&v=beta&t=p7MVNecx2tDI8pynz7eWRoOZKUhZHWJapBOLD5J-OOQ" style={{width:'100px'}}/>

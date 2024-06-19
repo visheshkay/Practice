@@ -12,6 +12,7 @@ export const buyerSellerLoginThunk =createAsyncThunk('buyer-seller-login',async(
             return res.data
 
         }else{
+            console.log(res.data.message)
             return thunkApi.rejectWithValue(res.data.message)
         }
     }else{

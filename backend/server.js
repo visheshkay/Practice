@@ -6,6 +6,11 @@ require('dotenv').config()
 const mc = require('mongodb').MongoClient;
 app.use(exp.json())
 
+
+app.use(exp.static(path.join(__dirname,'../frontend/build')))
+
+
+
 mc.connect(process.env.DB_URL)
 .then(client=>{
     const practicedb = client.db('practicedb');

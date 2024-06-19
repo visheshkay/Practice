@@ -49,7 +49,7 @@ require('dotenv').config()
    
         const buyerCred=req.body;
         
-        const dbbuyer= await sellerscollection.findOne({username:buyerCred.username})
+        const dbbuyer= await buyerscollection.findOne({username:buyerCred.username})
         if(dbbuyer===null){
             res.send({message:"Invalid username"})
         }else{

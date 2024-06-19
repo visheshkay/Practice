@@ -25,7 +25,7 @@ sellerApp.use((req, res, next) => {
 // Signup
 sellerApp.post('/sellers', expressAsyncHandler(async (req, res) => {
     const newseller = req.body;
-    console.log(newseller);
+    // console.log(newseller);
 
     const dbseller = await sellerscollection.findOne({ username: newseller.username });
 

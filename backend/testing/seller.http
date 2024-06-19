@@ -1,0 +1,20 @@
+POST  http://localhost:4000/seller-api/sellers
+Content-Type: application/json
+
+{
+     "userType":"seller",
+    "username":"akaay",
+    "password":"akaay",
+    "email":"akaay@gmail.com"
+}
+
+###
+POST http://localhost:4000/seller-api/login
+Content-Type: application/json
+
+{
+    
+     "userType":"seller",
+    "username":"akaay",
+    "password":"akaay"
+}

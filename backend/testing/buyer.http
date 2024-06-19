@@ -1,0 +1,21 @@
+POST  http://localhost:4000/buyer-api/buyers
+Content-Type: application/json
+
+{
+    "userType":"buyer",
+    "username":"akaay",
+    "password":"akaay",
+    "email":"akaay@gmail.com"
+}
+
+
+
+###
+POST  http://localhost:4000/buyer-api/login
+Content-Type: application/json
+
+{
+    "userType":"buyer",
+    "username":"akaay",
+    "password":"akaay"
+}

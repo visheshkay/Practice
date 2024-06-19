@@ -1,4 +1,5 @@
 const exp = require('express')
+const path = require('path')
 const app = exp()
 
 require('dotenv').config()
@@ -20,6 +21,7 @@ mc.connect(process.env.DB_URL)
 .catch(err=>{
     console.log("ERROR in Database Connection",err)
 })
+app.use(exp.static(path.join(__dirname,'../frontend/build')))
 
 
 const sellerApp=require('./apis/seller-api')
@@ -30,7 +32,9 @@ app.use('/buyer-api',buyersApp)
 app.use('/seller-api',sellerApp)
 
 
-
+app.use((req,res,next)=>{
+    res.sendFile(path.join(__dirname,'../frontend/build/index.html'))
+})
 
 
 

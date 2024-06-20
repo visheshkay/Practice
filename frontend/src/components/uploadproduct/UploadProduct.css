@@ -1,0 +1,68 @@
+.custom-product-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    max-width: 90%;
+}
+
+.custom-text-center {
+    text-align: center;
+}
+
+.custom-mb-4 {
+    margin-bottom: 20px;
+}
+
+.custom-text-primary {
+    color: black;
+}
+
+.custom-form-inline {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-form-group {
+    margin-bottom: 20px;
+}
+
+.custom-form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.custom-form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.custom-form-control:focus {
+    border-color: black;
+    outline: none;
+}
+
+.custom-lead {
+    font-size: 14px;
+    color: #dc3545;
+    margin-top: 5px;
+}
+
+.custom-btn {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    color: white;
+    background: linear-gradient(to top, #25aef8, #38c3ff, #2ec0ff, #23ccff, #17aff0);
+    border: none;
+    border-radius: 0.75em; /* Adjusted border-radius for responsiveness */
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0.125em 0.25em rgba(0, 0, 0, 0.1); /* Adjusted box-shadow for responsiveness */
+    transition: transform 0.2s, box-shadow 0.2s;
+}

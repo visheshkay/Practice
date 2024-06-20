@@ -31,10 +31,12 @@ app.use(exp.static(path.join(__dirname,'../frontend/build')))
 
 const sellerApp=require('./apis/seller-api')
 const buyersApp=require('./apis/buyer-api')
+const imageApp = require('./apis/image-api')
 
 
 app.use('/buyer-api',buyersApp)
 app.use('/seller-api',sellerApp)
+app.use('/image-api',imageApp)
 
 
 app.use((req,res,next)=>{

@@ -69,10 +69,10 @@ function Login() {
                 </div>
                 <button className="btn button-reg  mx-auto d-block" style={{ backgroundColor: "var(--main-yellow)" }}>Login</button>
             </form>
-            {/* {(
+            {(
                 errMsg.length !== 0 &&
                 <h1 className="lead text-center text-danger">{errMsg}</h1>
-            )} */}
+            )}
             <p className="lead text-center mt-2">New User?
                 <Link to="/new-user" className="fs-4 px-3">Register</Link>
                 here

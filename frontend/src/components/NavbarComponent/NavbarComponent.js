@@ -69,7 +69,7 @@ function NavbarComponent() {
         <Nav className="me-auto">
           <Nav.Link>
             <NavLink
-              to=""
+              to="sellerprofile"
               style={({ isActive }) => ({
                 textDecoration: 'none',
                 color: isActive ? 'wheat' : 'black',
@@ -81,7 +81,7 @@ function NavbarComponent() {
           </Nav.Link>
           <Nav.Link>
             <NavLink
-              to="profile"
+              to="uploadproduct"
               style={({ isActive }) => ({
                 textDecoration: 'none',
                 color: isActive ? 'wheat' : 'black',

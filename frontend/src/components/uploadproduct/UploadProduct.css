@@ -16,7 +16,7 @@
 }
 
 .custom-text-primary {
-    color: #007bff;
+    color: black;
 }
 
 .custom-form-inline {
@@ -32,7 +32,7 @@
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #007bff;
+    color: black;
 }
 
 .custom-form-control {
@@ -45,7 +45,7 @@
 }
 
 .custom-form-control:focus {
-    border-color: #007bff;
+    border-color: black;
     outline: none;
 }
 

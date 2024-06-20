@@ -16,10 +16,10 @@ function formSubmit(productObj){
 
     <div className="custom-product-container mx-auto w-50 bg-light mt-5">
     <div className="custom-text-center">
-        <h1 className="custom-mb-4 custom-text-primary">Upload Product</h1>
+        <h1 className="custom-mb-4 text-info custom-text-primary">Upload Product</h1>
         <form className="custom-form-inline mx-auto w-50" onSubmit={handleSubmit(formSubmit)}>
             <div className="custom-form-group mb-4">
-                <label htmlFor="productname" className="custom-form-label custom-text-primary">Product Name</label>
+                <label htmlFor="productname" className="custom-form-label text-dark custom-text-primary">Product Name</label>
                 <input
                     type="text"
                     className="custom-form-control"

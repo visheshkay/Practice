@@ -1,0 +1,10 @@
+.hero-section {
+    height: 60vh;
+    background: url('https://media.licdn.com/dms/image/C510BAQH7cLWQv17law/company-logo_200_200/0/1630605479999?e=2147483647&v=beta&t=p7MVNecx2tDI8pynz7eWRoOZKUhZHWJapBOLD5J-OOQ') center/contain no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(60, 193, 223);
+    text-align: center;
+  }
